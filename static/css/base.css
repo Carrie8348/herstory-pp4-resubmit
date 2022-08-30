@@ -3,8 +3,7 @@ html {
  }
  
  body {
-     background: url('/media/background.jpeg') no-repeat center center fixed;
-     background-color: #ECE7E4;
+     background-color: white;
      background-size: cover;
      height: calc(100vh - 164px);
      color: #000;
@@ -116,16 +115,6 @@ html {
      background: #000 !important;
  }
  
- .overlay {
-     height: 100%;
-     width: 100%;
-     top: 0;
-     left: 0;
-     position: fixed;
-     background: white;
-     z-index: -1;
- }
- 
  a.category-badge > span.badge:hover {
      background: #212529 !important;
      color: #fff !important;
@@ -216,7 +205,7 @@ html {
      overflow-y: auto;
  }
  
- /* Product Form */
+ /* Movie Form */
  
  .btn-file {
      position: relative;

@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404
+)
+from django.contrib import messages
 from .models import Movie
-
 # Create your views here.
 def MovieList(request):
     """ A view to show all products, including sorting and search queries """
@@ -9,28 +11,22 @@ def MovieList(request):
     query = None
     sort = None
 
-    if request.GET:
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
-            sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                movies = movies.annotate(lower_name=Lower('name'))
-        if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('movies'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            movies = movies.filter(queries)
-
-    current_sorting = f'{sort}'
-
     context = {
         'movies': movies,
-        'search_term': query,
-        'current_sorting': current_sorting,
     }
 
-    return render(request, 'movie/movies.html', context)
+    return render(request, 'movie/index.html', context)
+
+def movie_detail(request, movie_id):
+    """ A view to show individual movie details """
+
+    movie = get_object_or_404(MovieList, pk=movie_id)
+    #reviews = Reviews.objects.all()
+    context = {
+        'movie': movie,
+        #'reviews': reviews,
+    }
+
+
+
+    return render(request, 'movie/movie_detail.html', context)
