@@ -8,8 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Handy Thoughts, provide greate journals to paper lovers">
-  <meta name="keywords" content="journals, planners, bullet, diary, notebook, stationery, paper, stationery shop">
+  <meta name="description" content="HerStory, documentaries about women">
+  <meta name="keywords" content="women, woman, documentary, feminist, female">
   {% endblock %}
 
   {% block extra_meta %}
@@ -37,20 +37,18 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
-  <!-- Stripe -->
-  <script src="https://js.stripe.com/v3/"></script>
   {% endblock %}
 
   {% block extra_js %}
   {% endblock %}
 
-  <title>Handy Thoughts {% block extra_title %}{% endblock %}</title>
+  <title>HerStory{% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
-  <header class=" container-fluid fixed-top">
+  <header class="container-fluid col-12">
     <!-- contents on the top only on big screen-->
-    <div id="topnav" class="row bg-light bg-light pt-lg-2 d-none d-lg-flex">
+    <div id="topnav" class="row bg-light pt-lg-2 d-none d-lg-flex">
       <!-- logo -->
       <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -115,6 +113,10 @@
     </div>
   </header>
 
+  {% if messages %}
+  <div class="message-container"></div>
+  {% endif %}
+
   {% block page_header %}
   {% endblock %}
 
@@ -168,9 +170,6 @@
   <!-- Footer -->
 
   {% block postloadjs %}
-  <script>
-    $('.toast').toast('show');
-  </script>
   {% endblock %}
 </body>
 

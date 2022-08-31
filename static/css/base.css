@@ -9,7 +9,7 @@ html {
      color: #000;
      font-family: 'Montserrat';
  }
- 
+
  .card-img-top {
      height: 200px;
      width: auto;
@@ -29,14 +29,10 @@ html {
      font-weight: bold;
  }
  
- #movie-brand {
-     font-style:italic;
- }
  
  #review_p {
      font-size: 12pt;
  }
- 
  
  
  .footer {
@@ -46,6 +42,10 @@ html {
      bottom: 0;
      width: 100%;
    }
+
+form {
+    margin-left: 2.5rem;
+}
  
  
  #explanation {
@@ -69,12 +69,6 @@ html {
      width: fit-content;
  }
  
- .check-movies-button {
-     background: #5B5753;
-     color: white;
-     min-width: 260px;
- }
- 
  .btn-black {
      background: black;
      color: white;
@@ -93,9 +87,7 @@ html {
      color: white !important;
  }
  
- .shop-now-button:hover,
- .shop-now-button:active,
- .shop-now-button:focus,
+
  .btn-black:hover,
  .btn-black:active,
  .btn-black:focus {
@@ -115,10 +107,6 @@ html {
      background: #000 !important;
  }
  
- a.category-badge > span.badge:hover {
-     background: #212529 !important;
-     color: #fff !important;
- }
  
  .btt-button {
      height: 42px;
@@ -143,6 +131,14 @@ html {
     display: inline-block;
  }
  
+
+ .message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
  /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
  .arrow-up {
      width: 0; 
@@ -187,12 +183,7 @@ html {
  .arrow-dark {
      border-bottom-color: #343a40 !important;
  }
- 
- .shopping_cart-notification-wrapper {
-     height: 100px;
-     overflow-x: hidden;
-     overflow-y: auto;
- }
+
  
  /* Movie Form */
  
@@ -223,7 +214,7 @@ html {
  
  /* -------------------------------- Media Queries */
  /* fixed top navbar only on medium and up */
- @media (min-width: 992px) {
+ @media (min-width: 1200px) {
      .fixed-top-desktop-only {
          position: fixed;
          top: 0;
@@ -233,7 +224,7 @@ html {
      }
  
      .header-container {
-         padding-top: 164px;
+         padding-top: 50px;
      }
  }
  

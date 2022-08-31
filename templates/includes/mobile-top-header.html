@@ -11,17 +11,17 @@
         <a href="#" class="dropdown-item">Movie Management</a>
         {% endif %}
         <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-        <a href="#" class="dropdown-item">Logout</a>
+        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
         {% else %}
-        <a href="#" class="dropdown-item">Register</a>
-        <a href="#" class="dropdown-item">Login</a>
+        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
         {% endif %}
     </div>
 </li>
 <li class="list-inline-item d-block d-lg-none">
     <a class="text-black nav-link" href="#">
         <div class="text-center">
-            <div><i class="fas fa-envelope fa-lg"></i></div>
+            <div><i class="fas fa-list fa-lg"></i></div>
         </div>
     </a>
 </li>

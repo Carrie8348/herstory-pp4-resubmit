@@ -22,7 +22,6 @@ class UserProfileForm(forms.ModelForm):
             'default_county': 'County, State or Locality',
             'default_email': 'Email',
             'default_date': 'birthday',
-            
         }
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
