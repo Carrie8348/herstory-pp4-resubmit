@@ -37,13 +37,14 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
-
+  <!-- Stripe -->
+  <script src="https://js.stripe.com/v3/"></script>
   {% endblock %}
 
   {% block extra_js %}
   {% endblock %}
 
-  <title>HerStory {% block extra_title %}{% endblock %}</title>
+  <title>Handy Thoughts {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -53,10 +54,11 @@
       <!-- logo -->
       <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
-          <img src="{% static 'site_image/Logo-HerStory.png' %}" alt="HerStory Logo" style="width:120px;">
+          <img src="{% static 'site_image/logo.png' %}" alt="HerStory Logo" style="width:100px;">
         </a>
       </div>
-      <!--account forum & watchlist -->
+    
+      <!--account forum, & watchlist -->
       <div class="col-12 col-lg-9 my-auto py-1 py-lg-0 ">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item dropdown">
@@ -69,13 +71,13 @@
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
-              <a href="#" class="dropdown-item">Movie Management</a>
+              <a href="#" class="dropdown-item">Product Management</a>
               {% endif %}
-              <a href="#" class="dropdown-item">My Profile</a>
-              <a href="#" class="dropdown-item">Logout</a>
+              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
               {% else %}
-              <a href="#" class="dropdown-item">Register</a>
-              <a href="#" class="dropdown-item">Login</a>
+              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
               {% endif %}
             </div>
           </li>
@@ -113,7 +115,6 @@
     </div>
   </header>
 
-
   {% block page_header %}
   {% endblock %}
 
@@ -129,7 +130,7 @@
 
         <!-- Facebook -->
         <a class="btn btn-outline-light btn-floating m-1 text-dark"
-          href="#" target="_blank" rel="nofollow"
+          href="https://www.facebook.com/Handy-Thoughts-112475291573886!" target="_blank" rel="nofollow"
           aria-label="Visit our Facebook page (opens in new tab)" role="button" data-mdb-ripple-color="dark">
           <i class="fab fa-facebook-f"></i></a>
 
@@ -145,6 +146,12 @@
       </div>
 
       <!--  Social media -->
+      <div class="d-inline-flex">
+
+    </div>
+      <!--Grid column-->
+
+      <!-- Grid container -->
 
       <!-- Copyright -->
       <div class="text-center text-dark p-3">
@@ -161,7 +168,9 @@
   <!-- Footer -->
 
   {% block postloadjs %}
-  
+  <script>
+    $('.toast').toast('show');
+  </script>
   {% endblock %}
 </body>
 
