@@ -14,7 +14,7 @@ def add_review(request, movie_id):
 
     if request.method == 'POST':
     
-        movie = get_object_or_404(Movie, pk=movie_id)
+        movie = get_object_or_404(Movie.objects.all(), pk=movie_id)
         print(movie)        
         form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
@@ -52,7 +52,7 @@ def edit_review(request, review_id):
         form = ReviewForm(request.POST, request.FILES, instance=review)
         if form.is_valid():
             form.save()
-            messages.success(request, 'item was updated')
+            messages.success(request, 'review was updated')
             return redirect(reverse('home'))
         else:
             messages.error(

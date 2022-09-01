@@ -24,5 +24,6 @@ urlpatterns = [
     path('', include('movie.urls'), name='movie_urls'),
     path('review/', include('review.urls')),
     path('profile/', include('profiles.urls')),
+    path('watchlist/', include('watchlist.urls')),
     path('summernote/', include('django_summernote.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -16,7 +16,6 @@ class Movie(models.Model):
     released_on = models.CharField(max_length=200)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='movie_likes', blank=True)
-    dislikes = models.ManyToManyField(User, related_name='movie_dislikes', blank=True)
 
     class Meta:
         ordering = ['-updated_on']

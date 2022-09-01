@@ -29,7 +29,7 @@
             </div>
 
             <!--Movie Detail -->
-            <div class="col-sm-9">
+            <div class="col-sm-12">
 
                 <br><br>
                 <h6>Directors: {{ movie.director}} </h6>
@@ -37,7 +37,7 @@
                 <h6>Lead Actors: {{ movie.lead_actor}} </h6>
                 <h6>Country: {{ movie.country}}</h6><br>
                 {% if request.user.is_authenticated %}
-                <a href="#">
+                <a href="{% url 'add_to_watchlist' movie.id %}">
                     Add to watchlist<i class="fas fa-heart-right"></i></a>
                 {% endif %}
                 {% if request.user.is_superuser %}
@@ -47,12 +47,12 @@
                 </small>
                 {% endif %}
                 <br><br>
-                <p class="summernote">{{ movie.summary }}}</p>
+                <p>{{ movie.summary  | safe }}</p>
                 <div id="thumbs_up_down">
                     <!-- The number of likes  -->
+
                     <strong class="text-secondary"><i class="far fa-thumbs-up"></i>
-                        {{movie.number_of_likes }}
-                        <i class="far fa-thumbs-down"></i> {{movie.number_of_dislikes }} </strong>
+                        {{movie.number_of_likes }} </strong>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
             {% endif %}
         </div>
     </div>
-
+    {% if reviewed %}
     <div class="row">
         <div class="col-12">
             {% for review in reviews %}
@@ -103,9 +103,14 @@
             </div>
             {% endif %}
             {% endfor %}
+            {% endif%}
         </div>
     </div>
 </div>
 </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
 {% endblock %}

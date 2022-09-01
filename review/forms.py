@@ -4,7 +4,7 @@ from .models import Reviews
 
 class ReviewForm(forms.ModelForm):
     """
-    creates a form to add a new review for the product
+    creates a form to add a new review for the movie
     """
     class Meta:
         model = Reviews
