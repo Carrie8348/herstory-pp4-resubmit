@@ -11,6 +11,7 @@ from review.models import Reviews
 from .models import Movie
 
 
+
 # Create your views here.
 def MovieList(request):
     """ A view to show all products, including sorting and search queries """

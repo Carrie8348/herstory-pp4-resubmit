@@ -28,6 +28,18 @@ html {
     margin-left: 50px;
 }
 
+#movie_title {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#movie_title  a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
  #movie-detail-title{
      font-size: 18pt;
      font-weight: bold;
@@ -38,10 +50,6 @@ html {
      font-size: 12pt;
  }
  
- 
- .adminstuff {
-    margin-left: 100px;
- }
  
  .footer {
      color: black;
@@ -237,7 +245,7 @@ form {
      }
  
      .header-container {
-         padding-top: 50px;
+         padding-top: 1s0px;
      }
  }
  

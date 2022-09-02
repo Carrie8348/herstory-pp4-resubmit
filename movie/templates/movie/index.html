@@ -13,7 +13,7 @@
     <div class="container mb-2">
         <div class="row" id="home-title">
             <div class="col">
-                <h2 class="logo-font text-center mb-4 mt-5">Welcome to HerStory</h2>
+                <h2 class="logo-font text-center mb-4 mt-4">Welcome to HerStory</h2>
                 <hr>
             </div>
 
@@ -39,20 +39,10 @@
                                 {% endif %}
 
                                 <div class="image-flash mt-2">
-                                    <p class="logo-font"><strong> {{ movie.title }}</strong></p>
+                                    <a href="{% url 'movie_detail' movie.id %}">
+                                        <h5 id="movie_title"><strong> {{ movie.title }}</strong></h5>
+                                    </a>    
                                     <p>Director: {{ movie.director }}</p>
-                                </div>
-                            </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        {% if request.user.is_superuser %}
-                                        <small>
-                                            <a href="#">Edit</a> |
-                                            <a class="text-danger" href="#">Delete</a>
-                                        </small>
-                                        {% endif %}
-                                    </div>
                                 </div>
                             </div>
                         </div>
