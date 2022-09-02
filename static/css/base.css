@@ -23,7 +23,11 @@ html {
      object-fit: cover;
      margin-top: 5px;
  }
- 
+
+ #home-content {
+    margin-left: 50px;
+}
+
  #movie-detail-title{
      font-size: 18pt;
      font-weight: bold;
@@ -51,6 +55,11 @@ form {
  #explanation {
      font-size: 0.2pt;
  }
+
+.nav-mobile-font {
+    text-align: center;
+    font-size: 40px;
+}
  
  
  /* from Bulma */
@@ -231,12 +240,17 @@ form {
  /* pad the top a bit when navbar is collapsed on mobile */
  @media (max-width: 991px) {
      .header-container {
-         padding-top: 116px;
+         padding-top: 60px;
      }
  
      body {
          height: calc(100vh - 116px);
      }
+    
+
+    #home-content {
+        margin-left: 50px;
+    }
  
      .display-4.logo-font.text-black {
          font-size: 1rem;

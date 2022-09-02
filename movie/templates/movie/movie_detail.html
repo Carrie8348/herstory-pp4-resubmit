@@ -50,9 +50,13 @@
                 <p>{{ movie.summary  | safe }}</p>
                 <div id="thumbs_up_down">
                     <!-- The number of likes  -->
-
-                    <strong class="text-secondary"><i class="far fa-thumbs-up"></i>
-                        {{movie.number_of_likes }} </strong>
+                    <form action="{% url 'movie_likes' movie.id %}" 
+                    method="POST">
+                    {% csrf_token %}
+                    <button type="submit", name="movie_id" 
+                    value="{{ movie.id }}" class="btn"><i class="far fa-thumbs-up"></i></button>
+                        {{movie.number_of_likes }} likes </form>
+                   
                 </div>
             </div>
         </div>
@@ -78,7 +82,7 @@
             {% endif %}
         </div>
     </div>
-    {% if reviewed %}
+
     <div class="row">
         <div class="col-12">
             {% for review in reviews %}
@@ -103,7 +107,7 @@
             </div>
             {% endif %}
             {% endfor %}
-            {% endif%}
+            
         </div>
     </div>
 </div>

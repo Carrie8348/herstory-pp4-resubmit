@@ -46,7 +46,7 @@ def edit_review(request, review_id):
     view to edit review in the db
     """
 
-    review = get_object_or_404(Reviews, pk=review_id)
+    review = get_object_or_404(Reviews.objects.all(), pk=review_id)
 
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES, instance=review)
@@ -78,7 +78,7 @@ def edit_review(request, review_id):
 def delete_review(request, review_id):
     """ Delete a review """
 
-    review = get_object_or_404(Reviews, pk=review_id)
+    review = get_object_or_404(Reviews.objects.all(), pk=review_id)
     review.delete()
     messages.success(request, f'{review.title} deleted!')
     return redirect(reverse('home'))
