@@ -48,6 +48,7 @@
                 {% endif %}
                 <br><br>
                 <p>{{ movie.summary  | safe }}</p>
+                {% if request.user.is_authenticated %}
                 <div id="thumbs_up_down">
                     <!-- The number of likes  -->
                     <form action="{% url 'movie_likes' movie.id %}" 
@@ -56,7 +57,7 @@
                     <button type="submit", name="movie_id" 
                     value="{{ movie.id }}" class="btn"><i class="far fa-thumbs-up"></i></button>
                         {{movie.number_of_likes }} likes </form>
-                   
+                    {% endif %}
                 </div>
             </div>
         </div>
