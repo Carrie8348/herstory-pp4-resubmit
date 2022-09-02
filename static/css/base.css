@@ -39,6 +39,10 @@ html {
  }
  
  
+ .adminstuff {
+    margin-left: 100px;
+ }
+ 
  .footer {
      color: black;
      text-align: center;
@@ -246,10 +250,10 @@ form {
      body {
          height: calc(100vh - 116px);
      }
-    
 
     #home-content {
-        margin-left: 50px;
+        margin-left: 17px;
+        text-align: center;
     }
  
      .display-4.logo-font.text-black {
