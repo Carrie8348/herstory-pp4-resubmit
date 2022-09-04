@@ -38,7 +38,7 @@
                 <h6>Country: {{ movie.country}}</h6><br>
                 {% if request.user.is_authenticated %}
                 <a href="{% url 'add_to_watchlist' movie.id %}" class="btn btn-black rounded-0 text-uppercase">
-                    Add to watchlist<i class="fas fa-heart-right"></i></a>
+                    Add to watchlist  <i class="fas fa-heart"></i></a>
                 {% endif %}
                 <br><br>
                 <p>{{ movie.summary  | safe }}</p>
