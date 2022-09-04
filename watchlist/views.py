@@ -19,7 +19,7 @@ def watchlist(request):
         pass
 
     context = {
-        'watchlist': Watchlist,
+        'watchlist': watchlist,
     }
 
     return render(request, 'watchlist/watchlist.html', context)
@@ -32,7 +32,7 @@ def add_to_watchlist(request, movie_id):
     """
     movie = get_object_or_404(Movie, pk=movie_id)
 
-    # Create a wishlist for the user if they don't have one
+    # Create a watchlist for the user if they don't have one
     watchlist, _ = Watchlist.objects.get_or_create(user=request.user)
     # Add product to the wishlist
     watchlist.movies.add(movie)
@@ -50,7 +50,7 @@ def remove_from_watchlist(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
 
     # Remove product from the wishlist
-    watchlist.movies.remove(movies)
+    watchlist.movies.remove(movie)
     messages.info(request, "A movie was removed from your wishlist")
 
     return redirect(request.META.get('HTTP_REFERER'))
