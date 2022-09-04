@@ -31,10 +31,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-X_FRAME_OPTIONS = "SAMEORIGIN"
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['herstory.herokuapp.com', 'localhost']
 
+X_FRAME_OPTIONS = "SAMEORIGIN"
 
 # Application definition
 
@@ -58,6 +59,8 @@ INSTALLED_APPS = [
     'profiles',
     'watchlist',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -108,7 +111,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-SITE_ID = 1
+
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
