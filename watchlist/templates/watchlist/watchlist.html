@@ -30,7 +30,7 @@
               alt="women_movie">
         </a>
         {% else %}
-        <a href="{% url 'movie_detail' movie.id %}"></a>
+        <a href="{% url 'movie_detail' movie.id %}">
           <img class="card-img-top" src=" {{ movie.featured_image.url }}" alt="women_movie">
         </a>
         {% endif %}
