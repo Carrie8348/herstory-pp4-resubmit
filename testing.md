@@ -283,11 +283,13 @@ Profile Page
 - The W3C Markup Validator service was used to validate the HTML.
 - Most of HTML pages are tested and passed with no errors.
 - The "mobile_top_header" html file in "templates - includes" folder, is showing error because there is no <ol> or <ul> starting the file. But if I added it, the whole mobile top nav get ruied. So I keep it this way.
+![w3c_html_validator](/documentations/pics/html-validator.png)
 
 
 #### CSS
 - The W3C Markup Validator service was used to validate the CSS.
 - All CSS files are tested and passed with no errors.
+![w3c_html_validator](/documentations/pics/css-validator.png)
 
 #### Python
 - The PEP8 Python validator service was used to validate the python files.
