@@ -294,7 +294,7 @@ Profile Page
 - In the testing, the main errors are because lines are too long. I tried to make them shorter, but it passed the test but did not function right on the site anymore. Therefore I put #noqa at the end of the lines.
 
 #### JavaScript
-- I used https://jshint.com/ to test the JavaScript. The error appears, claims undefined variable "Stripe," but since this code was copied from Boutique Ado, and it is too vital for the site to work, I ignored it for the moment.
+- I used https://jshint.com/ to test the JavaScript. This site does not have a lot of javascript involved. I have tested the message js code. 
 
 ## Lighthouse Validation
 The site has been tested with Lighthouse. Performance could be further improved by analyzing the file types of images. Also since I use a free subscription for the Heroku app it starts really slowly which can affect the performance score.

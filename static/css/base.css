@@ -28,14 +28,14 @@ html {
     margin-left: 50px;
 }
 
-#movie_title {
+.movie_title {
     text-decoration: none;
     color: black;
     font-size: 20px;
     margin-top: 20px;
 }
 
-#movie_title  a, a:hover, a:focus, a:active {
+.movie_title  a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
 }
