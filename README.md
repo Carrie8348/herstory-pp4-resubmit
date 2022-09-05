@@ -1,108 +1,304 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Herstory
 
-Welcome Carrie8348,
+<img src="static/site_image/head.png" width="500" />
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Introduction
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Women are as complicated as men. 
 
-## Gitpod Reminders
+For many, many centuries, we have tried to tell our stories. Yet, in history, we did not have many audiences. Even lots of women themselves would not believe we do have stories to tell. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+But until recent years, through a series of feminist movements, for example, #metoo, women have started to say no to things they don't want to do, and we use all different ways to memorize our journeys, raise our voices, and ensure our stories are heard.
 
-`python3 -m http.server`
+Herstory is a website that introduces meaningful documentaries about women, hoping to inspire audiences, and brings many thoughts, stories, and ideas to them. 
 
-A blue button should appear to click: _Make Public_,
+We want to build an excellent community for documentary lovers and those interested in feminist history. 
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Goal
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+Dillinger uses a number of open source projects to work properly:
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- Build a good platform for users to find documentaries they might be interested in. 
+- Provide high-quality content for target users.- [markdown-it] - Markdown parser done right. Fast and easy to extend.
+- Excellent UX keeps users on the site exploring more content and exchanging ideas by leaving reviews and adding movies to their watchlists.- [node.js] - evented I/O for the backend
 
-To log into the Heroku toolbelt CLI:
+## UX
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Ideal User
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The ideal user for this site is:
 
-------
+- English speaking.
+- Users who are interested in feminist history and documentaries.
 
-## Release History
+Visitors to this website are searching for:
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Documentaries.
+- Exploring stories to be inspired.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Why our site?
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- We have an excellent taste collection of documentaries about women and feminist histories.
+- A good community for users to exchange ideas and topics.
+- Easy to navigate.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### User Stories
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+1. Users can view the movies list on the home page.
+2. Users can view the movie details.
+3. Login Users can add the movie to their watchlist.
+4. Login Users can remove the film from their watchlist.
+5. Login Users can add reviews on the film.
+6. Login Users can edit or remove reviews on the movies
+7. Users can see other people’s reviews of the film.
+8. Login users can see how many likes of the movie and can like the movie too.
+9. Users can sign up, log in, and log out.
+10. Users can create a profile.
+11. User can edit their profiles.
+12. Super users can add the movie to the movie list in the admin panel.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Features
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Each page features a responsive navigation bar with a conventional placing of the logo (top left), the Account, and Watchlist (only for login users) on the right top corner. On small screens, the Account and Watchlist (only for login users) are on the right side of the logo.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Each page features a footer on the bottom, with our social media link displayed.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### Home Page
+The Homepage displays the all movies on the site. There are movie image, title , director , lead actors displays . User can click on any of them to be redirected to the related movie detail page. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+It is responsive. On the larger screen, the products list 4 in a row, in the middle to large, 3 in a row, minor to middle screen, and 2 in a row, and lastly, it lists only 1 in a row.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+#### Movie Detail Page
+This page shows specific movie information to the user, with a movie picture showing, and title, directors, actors, release date, country and summary display. 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Users can click the button on the page to add a movie to the watchlist. 
 
-------
+Users can click the like button under the movie summary.Login users can see how many likes this movie has got.
 
-## FAQ about the uptime script
+Users can go back to the home page by clicking the button.
 
-**Why have you added this script?**
+Users can see the reviews has been left for the movie. But only login users can click the "Add Review" button to add a review to the specific movie. Without logging in, users are offer a choice of "Sign in" so they can leave review too.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+#### Profile Page
+This page contains userinformation with a form, so the users can update their info by clicking the button at the bottom of the form when needed.
 
-**How will this affect me?**
+#### Watchlist Page
+This page contains login user's choices of movie. They add the movie from the movie detail page to this watchlist. And it shows the movie image, title and director name. Login user can click the image or movie title to be redirected to the movie detail page.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+Login user can remove the movie from the watchlist.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+## Information Architecture
+### Database Modelling
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+#### Movie App:
+
+| Model Name | Models | Model Type |
+| ------ | ------ |------ |
+| Movie | title |CharField |
+| Movie | director |CharField |
+| Movie | lead_actor |CharField|
+| Movie | country |CharField |
+| Movie | updated_on |DateTimeField |
+| Movie | summary  |TextField |
+| Movie |featured_image  |CloudinaryField |
+| Movie |released_on |CharField|
+| Movie |status  |IntegerField |
+| Movie |likes  |ManyToManyField |
+
+#### Review App:
+
+| Model Name | Models | Model Type |
+| ------ | ------ |------ |
+| Reviews| title |CharField |
+| Reviews | movie |ForeignKey |
+| Reviews | created_on |DateTimeField|
+| Reviews | body |TextField |
+| Reviews| posted_by |ForeignKey/UserModel |
+
+#### Wishlist App:
+| Model Name | Models | Model Type |
+| ------ | ------ |------ |
+| Watchlist |user  |OneToOneField |
+| Watchlist | movies |ManyToManyField |
+|WatchlistItem |movie  |ForeignKey |
+| WatchlistItem |watchlist  |ForeignKey|
+
+#### Profiles App:
+| Model Name | Models | Model Type |
+| ------ | ------ |------ |
+| Profiles | User|OneToOneField/ UserModel |
+| Profiles |phone_number  |CharField |
+| Profiles | street_address1  |CharField |
+| Profiles | street_address2 |CharField |
+| Profiles |town_or_city  |CharField |
+| Profiles |county  |CharField |
+| Profiles | postcode  |CharField |
+| Profiles |country  |CountryField |
+|Profiles |email  |EmailField |
+| Profiles |birthday  |DateField |
+
+
+## Existing Features
+- Header Logo - It exists on every page. Clicking the logo returns to the home page.
+- Topnav icons Accounts exists on every page. Login user can click on it and have a dropdown menu with options "My profile" and "Log out". User not logging in can have options in the dropdown menu "Register" and "Log in".
+- Footer - It exists on every page and allows all users to navigate to the site's social media accounts quickly. It also shows the copyright at the bottom.
+- Review Form -  This will enable users to make reviews of the products.
+- Watchlist - This allows users to add movies they want to see in the future.
+
+
+## Features to Implement in future
+- User Profile Picture - Users can upload their picture to the profile, which will show on the review comment when they do reviews. 
+- Emoji - Users can use emojis when they leave reviews in the review area.
+- A Forum - Users can add posts to start their topics and interact with other login users.
+- Rating - For login users to quickly rate the movie without leaving a review.
+
+## SEO Implementation
+
+I have used the following meta to implement my SEO words:
+ ```sh
+<meta name="description" content="HerStory, documentaries about women">
+```
+ ```sh
+ <meta name="keywords" content="women, woman, documentary, feminist, female">
+```
+
+## Social Links
+
+#### Facebook
+It is the most common platform to interact with site users to start a campaign. Right now, no such Facebook page is created, but it is an idea for future events coming, so this could be useful.
+
+#### Instagram
+Another great platform is Instagram. Facebook is for the first generation of internet users, and Instagram targets younger generations. So far, there is an Instagram icon linking to my personal IG account. In the future, hopefully, we will create an account and showcase our documentary collections to millions of potential customers out there.
+
+
+#### Linked-In
+There is a link to my linked-in account URL for business growth potential. It is an authentic platform for people interested in this site or potential suppliers to build up open and honest business possibilities. 
+
+
+## Bugs
+
+- Watchlist Error: There was no showing on this page after I added the movie to the list. But it shows in the database. 
+- Solution: After many, many times checking my models and view, I found this minor typo issue that calls "movie" "Movie," which caused the problem. Therefore it was solved.
+
+<hr>
+
+- Heroku App  Error:  I have deployed the project on the Heroku app with no problem, but when I click "open app" on Heroku, it shows the " --tail" error.
+
+- Solution: Tutor Christine Kelley helped me with this one as I am still unfamiliar with spotting issues with Heroku logs. She discovered that the "all auth" wasn't appropriately added to the "Requirement.txt" file. Therefore I use the command "pip3 freeze > requirements.txt" to solve it. It works!
+
+<hr>
+
+- Another was the Heroku displaying issue: When I could successfully open the app from the Heroku site, the logo and header pic was not showing correctly on the page, the links were turning blue, and the display of movies was wrong.
+
+- Solution: Since the previously mentioned "all auth" error caused the deploying issue, I added the "DISABLE_COLLECTSTATIC" back in the config vars in the Heroku settings. And the "Debug=True" by the time tutor Christine Kelley suggested I change it to "False" and delete the "DISABLE_COLLECTSTATIC."  Then it works!
+
+
+## Used
+
+- This project uses HTML and CSS programming languages.
+
+- Bootstrap
+  1. The project uses Bootstrap 4 to structure the website and make the website responsive quickly and simply.
+  2. The project also uses BootstrapCDN to provide icons from FontAwesome.
+
+- Django:
+  1. The project uses Django MTV (models, templates, and views) to make front-end and back-end functions with each other.
+
+- Google Fonts : The project uses Google Fonts to style the website fonts.
+
+- jQuery: The project uses jQuery to reference Javascript needed for the responsive navbar.
+
+- Crispy Forms: It is for the forms to interact with the database.
+
+- Cloudinary: It is used to store static and media files.
+
+- Git: To commit to our GitPod terminal and push to GitHub.
+
+- GitHub: To keep the project after pushing.
+
+- Heroku: To deploy the project.
+
+- Keynote: Draw my wireframes. 
+
+- Canva: Design my logo.
+
+- Procreate: Draw the header picture on the home page.
+
+
+## Testing
+Testing information can be found in separate TESTING—MD file.
+
+## Deployment
+#### Heroku
+
+This project deploys on Heroku.
+
+1. Add requirements.txt by using the command in the terminal: 
+```sh
+ pip3 freeze --local > requirements.txt
+```
+2. Git adds and commits the changes.
+3. Create or log in to a Heroku account.
+4. Create a Heroku app.
+5. On the Resources page, search and add Heroku Postgres.
+6. Add Database URL and Secret key both in Heroku and local.
+7. Add gunicorn to the project.
+8. Allow Heroku as ALLOWED_HOSTS in the settings of the project.
+9. Add and commit the changes to the code and push them to GitHub.
+10. Deploy page in Heroku, choose "GitHub" as the "deployment method, "connect to GitHub, and select related repo. 
+11. Choose "Automatic Deploys".
+12. Choose "Enable automatic deploys" or choose "Deploy branch" and manually deploy.
+13. Click "Deploy branch."
+14. If successful, it shows a message "The app was successfully deployed.".
+15. "View" when it is done.
+16. If not successful, read the log and spot the issue. 
+17. Fix issue and deploy again until successful.
+
+## Local Environment
+- Use Gitpod's built-in virtual environment feature.
+- Create env.py contains the duplicate keys that exist in the Heroku Config vars:
+  1. Database URL
+  2. Secret Key
+  3. Cloudinary
+- To also start a requirement.txt file with the command :
+```sh
+ pip3 freeze --local > requirements.txt
+```
+
+### Static and Media Files
+```sh
+ STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+```sh
+MEDIA_URL = '/django-summernote/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 ```
 
-**Anything more?**
+## Acknowledgement
+1. I have collected some ideas for the footer code from the W3C school website. 
+2. I have collected the movie posters and descriptions from douban.com.
+3. I have used my previous pp5 project, "Handy Thoughts" as my basic layout for this resubmit project.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Disclaimer
+The content of this website is for educational purposes only.
 
----
 
-Happy coding!
+## Special Thanks
+This is the second time I have worked on PP4. I certainly know a lot more after the studies and the work on project 5.  
+
+I must thank all the tutors, Ger Tobin, Christine Kelley, and Kevin Loughrey. Even this time around, I knew more, but I still got caught up in things I was not capable of. Your help and advice are very much appreciated. And the encouragements, I wish we'd cheered with wine haha.
+
+And to the assessment result last time. It was very fair. I didn't do enough CRUD and failed. It pushed me to face it and work harder. And I am much more confident now.
