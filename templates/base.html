@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="HerStory, documentaries about women">
+  <meta name="description" content="HerStory, documentaries about women theme-color=bg-white">
   <meta name="keywords" content="women, woman, documentary, feminist, female">
   {% endblock %}
 
@@ -55,7 +55,7 @@
           <img src="{% static 'site_image/logo.png' %}" alt="HerStory Logo" style="width:100px;">
         </a>
       </div>
-    
+
       <!--account forum, & watchlist -->
       <div class="col-12 col-lg-9 my-auto py-1 py-lg-0 ">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
@@ -91,26 +91,24 @@
       </div>
     </div>
     <!-- toggler button -->
-        {% include 'includes/mobile-top-header.html' %}
-      </nav>
+    {% include 'includes/mobile-top-header.html' %}
     </div>
   </header>
 
   {% if messages %}
-  <div class="container bg-gradient=dark" >
-    <div class="row" >
-        <div class="col-md-8 offset-md-2">
-            {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg"
-            role="alert">
-                {{ message | safe }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                </button>
-            </div>
-            {% endfor %}
+  <div class="container bg-gradient=dark">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+          {{ message | safe }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+          </button>
         </div>
+        {% endfor %}
+      </div>
     </div>
-</div>
+  </div>
 
   {% endif %}
 
@@ -128,14 +126,14 @@
       <div class="mb-4">
 
         <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1 text-dark"
-          href="https://www.facebook.com/carrie.tie/" target="_blank" rel="nofollow"
-          aria-label="Visit our Facebook page (opens in new tab)" role="button" data-mdb-ripple-color="dark">
+        <a class="btn btn-outline-light btn-floating m-1 text-dark" href="https://www.facebook.com/carrie.tie/"
+          target="_blank" rel="nofollow" aria-label="Visit our Facebook page (opens in new tab)" role="button"
+          data-mdb-ripple-color="dark">
           <i class="fab fa-facebook-f"></i></a>
 
         <!-- Instagram -->
         <a class="btn btn-outline-light btn-floating m-1 text-dark" target="_blank" rel="nofollow"
-        href="https://www.instagram.com/noodle_monkey_is_funky/" role="button">
+          href="https://www.instagram.com/noodle_monkey_is_funky/" role="button">
           <i class="fab fa-instagram"></i></a>
 
         <!-- Linkedin -->
@@ -146,11 +144,6 @@
       </div>
 
       <!--  Social media -->
-      <div class="d-inline-flex">
-
-    </div>
-      <!--Grid column-->
-
       <!-- Grid container -->
 
       <!-- Copyright -->
@@ -170,11 +163,11 @@
   {% block postloadjs %}
   <script>
     setTimeout(function () {
-        let messages = document.getElementById("msg");
-        let alert = new bootstrap.Alert(messages);
-        alert.close();
+      let messages = document.getElementById("msg");
+      let alert = new bootstrap.Alert(messages);
+      alert.close();
     }, 1000);
-</script>
+  </script>
   {% endblock %}
 </body>
 

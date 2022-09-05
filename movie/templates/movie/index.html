@@ -3,7 +3,7 @@
 
 {% block page_header %}
 <div class="container header-container text-center mt-0">
-    <img src="{% static 'site_image/head.png' %}"  class="img-fluid" alt="Responsive image" style="width:1170px;">
+    <img src="{% static 'site_image/head.png' %}" class="img-fluid" alt="Responsive image" style="width:1170px;">
 </div>
 {% endblock %}
 
@@ -41,7 +41,7 @@
                                 <div class="image-flash mt-2">
                                     <a href="{% url 'movie_detail' movie.id %}">
                                         <h5 id="movie_title"><strong> {{ movie.title }}</strong></h5>
-                                    </a>    
+                                    </a>
                                     <p>Director: {{ movie.director }}</p>
                                 </div>
                             </div>

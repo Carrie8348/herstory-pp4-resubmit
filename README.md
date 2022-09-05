@@ -1,6 +1,16 @@
 ## Herstory
 
+<hr>
+
+### Make sure our voices are heard
+
+<hr>
+
 <img src="static/site_image/head.png" width="500" />
+
+<hr>
+
+![mockup](/documentations/pics/mockup.png)
 
 ## Introduction
 
@@ -16,10 +26,6 @@ We want to build an excellent community for documentary lovers and those interes
 
 
 ## Goal
-
-
-Dillinger uses a number of open source projects to work properly:
-
 - Build a good platform for users to find documentaries they might be interested in. 
 - Provide high-quality content for target users.- [markdown-it] - Markdown parser done right. Fast and easy to extend.
 - Excellent UX keeps users on the site exploring more content and exchanging ideas by leaving reviews and adding movies to their watchlists.- [node.js] - evented I/O for the backend
@@ -67,10 +73,48 @@ Each page features a responsive navigation bar with a conventional placing of th
 
 Each page features a footer on the bottom, with our social media link displayed.
 
+##### Topnav on the page
+
+- Topnav on big screen without watchlist (not logged-in)
+![topnav](/documentations/pics/topnav_without_login_big.png)
+
+- Topnav on big screen with wishlist (logged-in)
+![topnav](/documentations/pics/topnav_login_big.png)
+
+- Topnav on small screen without watchlist (not logged-in)
+![topnav](/documentations/pics/topnav_without_login_small.png)
+
+- Topnav on small screen with watchlist
+
+![topnav](/documentations/pics/topnav_login_small.png)
+
+- Footer on big screen
+![footer](/documentations/pics/footer-big.png)
+
+- Footer on small screen
+ 
+![footer](/documentations/pics/footer-small.jpeg)
+
+
 #### Home Page
 The Homepage displays the all movies on the site. There are movie image, title , director , lead actors displays . User can click on any of them to be redirected to the related movie detail page. 
 
-It is responsive. On the larger screen, the products list 4 in a row, in the middle to large, 3 in a row, minor to middle screen, and 2 in a row, and lastly, it lists only 1 in a row.
+It is responsive. On the larger screen, the products list 4 in a row, in the middle to large, 3 in a row, minor to middle screen, and 2 in a row, and lastly, it lists only 1 in a row. And the page when it onlys shows two movies side by side, the topnav will also be the same as the mobile position.
+
+- Homepage on big screen
+![homepage](/documentations/pics/homepage-big.png)
+
+- Homepage on smaller screen
+![homepage](/documentations/pics/homepage-smaller.png)
+
+- Homepage on even smaller screen
+![homepage](/documentations/pics/homepage-even-smaller.png)
+
+- Homepage on the smallest screen, such as mobile
+
+![homepage](/documentations/pics/homepage-small.jpeg)
+
+
 
 
 #### Movie Detail Page
@@ -78,23 +122,131 @@ This page shows specific movie information to the user, with a movie picture sho
 
 Users can click the button on the page to add a movie to the watchlist. 
 
-Users can click the like button under the movie summary.Login users can see how many likes this movie has got.
+Login users can click the like button under the movie summary.Login users can see how many likes this movie has got.
 
 Users can go back to the home page by clicking the button.
 
 Users can see the reviews has been left for the movie. But only login users can click the "Add Review" button to add a review to the specific movie. Without logging in, users are offer a choice of "Sign in" so they can leave review too.
 
+- Movie Detail Page on big screen
+![movie_detail](/documentations/pics/movie_detail_big.png)
+
+- Movie Detail Page on small screen
+
+![movie_detail](/documentations/pics/movie_detail_small.jpeg)
+
+- Add to Watchlist button (same on big and small screen)
+
+![watchlist_button](/documentations/pics/add_to_watchlist_button.png)
+
+- Movie Likes  (same on big and small screen)
+
+![movie_likes](/documentations/pics/likes.png)
+
+- Go Back Button (same on big and small screen)
+
+![go_back](/documentations/pics/go_back.png)
+
+- Add Reviews Button (same on big and small screen)
+
+![add_reviews_button](/documentations/pics/add_reviews.png)
+
+- Reviews showing on the page (same on big and small screen)
+![add_reviews_button](/documentations/pics/reviews_display.png)
+
+
+#### Add / Edit Review Page
+These two pages are almost identical, but only for different purpose, one is for user to add review to the movie, one is for user to edit the existing review.
+
+- Add Review Page on big screen
+![add_reviews](/documentations/pics/add_review_page_big.png)
+
+- Add Review Page on small screen
+
+![add_reviews](/documentations/pics/add_review_page_small.jpeg)
+
+- Edit Review Page on big screen
+![edit_reviews](/documentations/pics/edit_review_big.png)
+
+- Edit Review Page on small screen
+
+![edit_reviews](/documentations/pics/edit_review_small.jpeg)
+
+#### Sign up/Log in/Log out Page
+These pages contains function for user to register, log in and log out.
+
+User needs to click on the "Account" icon on the topnav to find their options.
+
+- Not logged in user's option in dropdown menu
+
+![account_icon](/documentations/pics/account_icon_dropdown_menu_without_logged_in.png)
+
+- Logged in user's option in dropdown menu
+
+![account_icon](/documentations/pics/account_icon_dropdown_menu_logged_in.png)
+
+Register: User clicks on the "Account" icon on the topnav, to have a dropdown menu, and choose "Register" to sign up to the website. 
+
+- Sign Up page on big screen
+![register](/documentations/pics/sign-up-big.png)
+
+- Sign Up page on small screen
+
+![register](/documentations/pics/sign-up-small.jpeg)
+
+Log in: User clicks on the "Account" icon on the topnav, to have a dropdown menu, and choose "Log in" if he/she already has an account. 
+
+- Log in page on big screen
+![log_in](/documentations/pics/log-in-big.png)
+
+- Log in page on small screen
+
+![log_in](/documentations/pics/log-in-small.jpeg)
+
+Log out: Login User clicks on the "Account" icon on the topnav, to have a dropdown menu ,and choose "Log out".
+
+- Sign out page on big screen
+![sign_out](/documentations/pics/sign-out-big.png)
+
+- Sign out page on small screen
+
+![sign_out](/documentations/pics/sign-out-small.jpeg)
+
+
+
+
 #### Profile Page
-This page contains userinformation with a form, so the users can update their info by clicking the button at the bottom of the form when needed.
+This page contains user information with a form, so the users can update their info by clicking the button at the bottom of the form when needed.
+
+- Profile page on big screen
+![profile](/documentations/pics/profile_big.png)
+
+- Profile page on small screen
+
+![profile](/documentations/pics/profile_small.jpeg)
+
 
 #### Watchlist Page
 This page contains login user's choices of movie. They add the movie from the movie detail page to this watchlist. And it shows the movie image, title and director name. Login user can click the image or movie title to be redirected to the movie detail page.
 
-Login user can remove the movie from the watchlist.
+Login user can remove the movie from the watchlist. 
+
+When there is nothing in the watchlist, there will be a sentence on the page: "There is nothing on your watchlist"
+
+- Watchlist page (with saved movie) on big screen
+![watchlist](/documentations/pics/watchlist_big.png)
+
+- Watchlist page (with saved movie) on small screen
+
+![watchlist](/documentations/pics/watchlist_small.jpeg)
 
 
+- Empty Watchlist page on big screen
+![watchlist](/documentations/pics/empty_watchlist_big.png)
 
+- Empty Watchlist page on small screen
 
+![watchlist](/documentations/pics/empty_watchlist_small.jpeg)
 
 ## Information Architecture
 ### Database Modelling
@@ -165,7 +317,7 @@ Login user can remove the movie from the watchlist.
 
 I have used the following meta to implement my SEO words:
  ```sh
-<meta name="description" content="HerStory, documentaries about women">
+<meta name="description" content="HerStory, documentaries about women theme-color=bg-white">
 ```
  ```sh
  <meta name="keywords" content="women, woman, documentary, feminist, female">
@@ -235,7 +387,7 @@ There is a link to my linked-in account URL for business growth potential. It is
 
 
 ## Testing
-Testing information can be found in separate TESTING—MD file.
+Testing information can be found in separate TESTING—MD file. [Link](/testing.md)
 
 ## Deployment
 #### Heroku
