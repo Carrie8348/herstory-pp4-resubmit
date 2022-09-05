@@ -24,17 +24,23 @@
     <div class="col-12 col-md-6 col-lg-3">
       <div class="image-container mt-5">
         {% if "placeholder" in movie.featured_image.url %}
-        <img class="card-img-top"
-            src="https://res.cloudinary.com/carriecloud8348/image/upload/v1661843282/8fa7580221d4151653903b9a71a6a57e_gtwuov.jpg"
-            alt="women_movie">
+        <a href="{% url 'movie_detail' movie.id %}">
+          <img class="card-img-top"
+              src="https://res.cloudinary.com/carriecloud8348/image/upload/v1661843282/8fa7580221d4151653903b9a71a6a57e_gtwuov.jpg"
+              alt="women_movie">
+        </a>
         {% else %}
-        <img class="card-img-top" src=" {{ movie.featured_image.url }}" alt="women_movie">
+        <a href="{% url 'movie_detail' movie.id %}"></a>
+          <img class="card-img-top" src=" {{ movie.featured_image.url }}" alt="women_movie">
+        </a>
         {% endif %}
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-4">
       <div class="products-detail-container my-5">
-        <h3 class="mb-4 pt-md-5 text-muted font-weight-bold"> {{ movie.title }}</h3>
+        <a href="{% url 'movie_detail' movie.id %}">
+          <h3 class="mb-4 pt-md-5 text-muted font-weight-bold"> {{ movie.title }}</h3>
+        </a>
         <h4 class="text-muted">{{ movie.director }}</h4>
       </div>
       <!-- Buttons -->
