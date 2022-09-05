@@ -47,52 +47,52 @@
 
 <body>
   <header class="container-fluid col-12">
-    <!-- contents on the top only on big screen-->
-    <div id="topnav" class="row bg-light pt-lg-2 d-none d-lg-flex">
-      <!-- logo -->
-      <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
-        <a href="{% url 'home' %}" class="nav-link main-logo-link">
-          <img src="{% static 'site_image/logo.png' %}" alt="HerStory Logo" style="width:100px;">
-        </a>
-      </div>
+      <!-- contents on the top only on big screen-->
+      <div id="topnav" class="row bg-light pt-lg-2 d-none d-lg-flex">
+        <!-- logo -->
+        <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
+          <a href="{% url 'home' %}" class="nav-link main-logo-link">
+            <img src="{% static 'site_image/logo.png' %}" alt="HerStory Logo" style="width:100px;">
+          </a>
+        </div>
 
-      <!--account forum, & watchlist -->
-      <div class="col-12 col-lg-9 my-auto py-1 py-lg-0 ">
-        <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-          <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="my-0">Account</p>
+        <!--account forum, & watchlist -->
+        <div class="col-12 col-lg-9 my-auto py-1 py-lg-0 ">
+          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <li class="list-inline-item dropdown">
+              <a class="text-black nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                  <div><i class="fas fa-user fa-lg"></i></div>
+                  <p class="my-0">Account</p>
+                </div>
+              </a>
+              <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
               </div>
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-              {% if request.user.is_authenticated %}
-              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-              {% else %}
-              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-              {% endif %}
-            </div>
-          </li>
+            </li>
 
-          {% if request.user.is_authenticated %}
-          <li class="list-inline-item">
-            <a class="text-black nav-link" href="{% url 'watchlist' %}">
-              <div class="text-center">
-                <div><i class="fas fa-heart fa-lg"></i></div>
-                <p class="my-0">Watchlist</p>
-              </div>
-            </a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
+            {% if request.user.is_authenticated %}
+            <li class="list-inline-item">
+              <a class="text-black nav-link" href="{% url 'watchlist' %}">
+                <div class="text-center">
+                  <div><i class="fas fa-heart fa-lg"></i></div>
+                  <p class="my-0">Watchlist</p>
+                </div>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
 
-    <!-- toggler button -->
-    {% include 'includes/mobile-top-header.html' %}
-  
+      <!-- toggler button -->
+      {% include 'includes/mobile-top-header.html' %}
+     </div>
   </header>
 
   {% if messages %}
