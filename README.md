@@ -353,6 +353,12 @@ There is a link to my linked-in account URL for business growth potential. It is
 
 - Solution: Since the previously mentioned "all auth" error caused the deploying issue, I added the "DISABLE_COLLECTSTATIC" back in the config vars in the Heroku settings. And the "Debug=True" by the time tutor Christine Kelley suggested I change it to "False" and delete the "DISABLE_COLLECTSTATIC."  Then it works!
 
+<hr>
+
+- HTML validator issue: I have created a separated file for the mobile-top-header html, which exists in the project level templages foler - includes folder. And this caused an issue in the W3C validator, becuase it doesn't start with <ol> or <ul>
+
+- Solution: I tried added it in the file and it passed the validation, but it displays wrong on the mobile then. Therefore I ignore it.
+
 
 ## Used
 
