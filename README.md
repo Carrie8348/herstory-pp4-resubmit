@@ -24,6 +24,21 @@ Herstory is a website that introduces meaningful documentaries about women, hopi
 
 We want to build an excellent community for documentary lovers and those interested in feminist history. 
 
+## Wireframes
+
+1. Homepage
+![wireframe](/documentations/wireframes/wf-01.png)
+2. Movie Detail Page
+![wireframe](/documentations/wireframes/wf-02.png)
+3. Profile Page
+![wireframe](/documentations/wireframes/wf-03.png)
+4. Add Review Page
+![wireframe](/documentations/wireframes/wf-04.png)
+5. Edit Review Page
+![wireframe](/documentations/wireframes/wf-05.png)
+6. Watchlist Page
+![wireframe](/documentations/wireframes/wf-06.png)
+
 
 ## Goal
 - Build a good platform for users to find documentaries they might be interested in. 
@@ -97,7 +112,11 @@ Each page features a footer on the bottom, with our social media link displayed.
 
 
 #### Home Page
-The Homepage displays the all movies on the site. There are movie image, title , director , lead actors displays . User can click on any of them to be redirected to the related movie detail page. 
+The Homepage displays the all movies on the site. 
+
+There is a header pic displays, that's my drawing, and meaning all women in all races have lots stories to tell. Here is a place for every woman.
+
+There are movie image, title , director , lead actors displays . User can click on any of them to be redirected to the related movie detail page. 
 
 It is responsive. On the larger screen, the products list 4 in a row, in the middle to large, 3 in a row, minor to middle screen, and 2 in a row, and lastly, it lists only 1 in a row. And the page when it onlys shows two movies side by side, the topnav will also be the same as the mobile position.
 
@@ -211,7 +230,6 @@ Log out: Login User clicks on the "Account" icon on the topnav, to have a dropdo
 - Sign out page on small screen
 
 ![sign_out](/documentations/pics/sign-out-small.jpeg)
-
 
 
 
