@@ -243,12 +243,11 @@ form {
          left: 0;
          z-index: 1030;
      }
- 
+     
  }
  
  /* pad the top a bit when navbar is collapsed on mobile */
  @media (max-width: 991px) {
- 
      body {
          height: calc(100vh - 116px);
      }
