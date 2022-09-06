@@ -9,7 +9,7 @@ class Watchlist(models.Model):
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     movies = models.ManyToManyField(Movie,
-                                      related_name='movie_watchlist')
+                                    related_name='movie_watchlist')
 
     def __str__(self):
         return f'Watchlist ({self.user})'
@@ -17,17 +17,17 @@ class Watchlist(models.Model):
 
 class WatchListItem(models.Model):
     """
-    Show watchlist items 
+    Show watchlist items
     """
 
     movie = models.ForeignKey(Movie,
-                                null=False,
-                                blank=False,
-                                on_delete=models.CASCADE)
+                              null=False,
+                              blank=False,
+                              on_delete=models.CASCADE)
     watchlist = models.ForeignKey(Watchlist,
-                                 null=False,
-                                 blank=False,
-                                 on_delete=models.CASCADE)
+                                  null=False,
+                                  blank=False,
+                                  on_delete=models.CASCADE)
 
     def __str__(self):
         return self.movie.title

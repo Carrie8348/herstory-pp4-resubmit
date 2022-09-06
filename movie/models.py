@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 # Create your models here.
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Movie(models.Model):
     title = models.CharField(max_length=200, unique=True)
     director = models.CharField(max_length=300)
@@ -14,8 +15,10 @@ class Movie(models.Model):
     summary = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     released_on = models.CharField(max_length=200)
-    status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='movie_likes', blank=True)
+    status = models.IntegerField(choices=STATUS,
+                                 default=0)
+    likes = models.ManyToManyField(User,
+                                   related_name='movie_likes', blank=True)
 
     class Meta:
         ordering = ['-updated_on']
@@ -25,4 +28,3 @@ class Movie(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
-

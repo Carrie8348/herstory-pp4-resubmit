@@ -293,7 +293,33 @@ Profile Page
 
 #### Python
 - The PEP8 Python validator service was used to validate the python files.
-- In the testing, the main errors are because lines are too long. I tried to make them shorter, but it passed the test but did not function right on the site anymore. Therefore I put #noqa at the end of the lines.
+- In the testing, the main errors are because lines are too long. I tried to make them shorter, it passed the test but did not function right on the site anymore. Therefore I put #noqa at the end of the lines. Like below picture displays:
+![w3c_html_validator](/documentations/pics/pep8/profileapp_forms_lines_too_long.png)
+- All the other test results are screen captured here: [Link](/documentations/pics/pep8/)
+- The tested files are:
+
+| App | Files |
+| ------ | ------ |
+| Movie | models.py|
+| Movie | admin.py |
+| Movie | forms.py |
+| Movie | urls.py|
+| Movie | views.py |
+| Profile | models.py  |
+| Profile |urls.py  |
+| Profile |views.py|
+| Profile|forms.py |
+| Review |models.py  |
+| Review |admin.py  |
+| Review |forms.py  |
+| Review |urls.py  |
+| Review |views.py |
+| Watchlist |models.py |
+| Watchlist |urls.py|
+| Watchlist |admin.py |
+| Watchlist |views.py |
+
+
 
 #### JavaScript
 - I used https://jshint.com/ to test the JavaScript. This site does not have a lot of javascript involved. I have tested the message js code. 
@@ -305,11 +331,14 @@ The site has been tested with Lighthouse. Performance could be further improved 
 ## Browser Validation
 The site was tested on different browsers:
 - Google Chrome
+![on-chrome](/documentations/pics/on-chrome.png)
 - Firefox
+![on-firefox](/documentations/pics/on-firefox.png)
 - Safari
+![on-safari](/documentations/pics/on-safari.png)
 
 ## User testing
-I have several family and friends view and tried the site, and they like the look of it and think it functions well and smoothly. 
+I have several family and friends view and tried the site, the feedbacks are quite good. They say the site looks very neat, and they like the concept and meaning of it.
 
 
 

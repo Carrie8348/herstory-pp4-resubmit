@@ -13,9 +13,9 @@ def add_review(request, movie_id):
     """
 
     if request.method == 'POST':
-    
+
         movie = get_object_or_404(Movie.objects.all(), pk=movie_id)
-        print(movie)        
+        print(movie)
         form = ReviewForm(request.POST, request.FILES)
         if form.is_valid():
             form.save(commit=False)
@@ -70,8 +70,6 @@ def edit_review(request, review_id):
     }
 
     return render(request, template, context)
-    
-
 
 
 @login_required

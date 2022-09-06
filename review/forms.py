@@ -8,4 +8,4 @@ class ReviewForm(forms.ModelForm):
     """
     class Meta:
         model = Reviews
-        exclude = ('movie', 'posted_by',) 
+        exclude = ('movie', 'posted_by',)

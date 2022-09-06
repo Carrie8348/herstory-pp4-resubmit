@@ -20,7 +20,7 @@ class Reviews(models.Model):
 
     class Meta:
         ordering = ['-created_on']
-    
+
     class Meta:
         verbose_name_plural = 'Reviews'
 
