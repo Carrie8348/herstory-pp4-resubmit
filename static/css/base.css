@@ -73,7 +73,7 @@ form {
     font-size: 40px;
 }
  
- 
+
  /* from Bulma */
  .icon {
      align-items: center;
@@ -244,16 +244,10 @@ form {
          z-index: 1030;
      }
  
-     .header-container {
-         padding-top: 10px;
-     }
  }
  
  /* pad the top a bit when navbar is collapsed on mobile */
  @media (max-width: 991px) {
-     .header-container {
-         padding-top: 60px;
-     }
  
      body {
          height: calc(100vh - 116px);
