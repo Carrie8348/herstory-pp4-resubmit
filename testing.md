@@ -1,11 +1,14 @@
 # Testing.md
 
-- Test User Stories
-- Manual Testing
-- Validations
-- Lighthouse
-- Browser Validation
-- User Testing
+[Readme File](/README.md)
+
+
+## Table of Contents 
+1. [Test User Stories](#Test-User-Stories)
+2. [Manual Testing](#Manual-Testing)
+3. [Validations](#Validations)
+4. [User Testiing](#User-Testing)
+
 
 <hr>
 
@@ -68,6 +71,7 @@ Topnav
 ![topnav](/documentations/pics/topnav_login_big.png)
 
 - Topnav on small screen without watchlist (not logged-in)
+
 ![topnav](/documentations/pics/topnav_without_login_small.png)
 
 - Topnav on small screen with watchlist

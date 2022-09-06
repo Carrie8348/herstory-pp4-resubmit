@@ -1,5 +1,5 @@
 ## Herstory
-
+[LiveSite Here](http://herstory.herokuapp.com/)
 <hr>
 
 ### Make sure our voices are heard
@@ -11,6 +11,28 @@
 <hr>
 
 ![mockup](/documentations/pics/mockup.png)
+
+# Table of Content
+1. [Introduction](#Introduction)
+2. [Wireframes](#Wireframes)
+3. [Goal](#Goal)
+4. [UX](#UX)
+5. [Features](#Features)
+6. [Information Architecture](#Information-Architecture)
+7. [Existing Features](#Existing-Features)
+8. [Future Features](#Future-Features)
+9. [SEO Implementation](#SEO-Implementation)
+10. [Social Links](#Social-Links)
+11. [Bugs](#Bugs)
+12. [Used](#Used)
+13. [Testing](#Testing)
+14. [Deployment](#Deployment)
+15. [Local Environment](#Local-Environment)
+16. [Acknowledgement](#Acknowledgement)
+17. [Disclaimer](#Disclaimer)
+18. [Special Thanks](#Special-Thanks)
+
+
 
 ## Introduction
 
@@ -114,7 +136,7 @@ Each page features a footer on the bottom, with our social media link displayed.
 #### Home Page
 The Homepage displays the all movies on the site. 
 
-There is a header pic displays, that's my drawing, and meaning all women in all races have lots stories to tell. Here is a place for every woman.
+There is a header pic displays, that's my drawing, and meaning all women in all races have lots stories to tell. Here is a place for every women.
 
 There are movie image, title , director , lead actors displays . User can click on any of them to be redirected to the related movie detail page. 
 
@@ -132,8 +154,6 @@ It is responsive. On the larger screen, the products list 4 in a row, in the mid
 - Homepage on the smallest screen, such as mobile
 
 ![homepage](/documentations/pics/homepage-small.jpeg)
-
-
 
 
 #### Movie Detail Page
@@ -325,7 +345,7 @@ When there is nothing in the watchlist, there will be a sentence on the page: "T
 - Watchlist - This allows users to add movies they want to see in the future.
 
 
-## Features to Implement in future
+## Future Features
 - User Profile Picture - Users can upload their picture to the profile, which will show on the review comment when they do reviews. 
 - Emoji - Users can use emojis when they leave reviews in the review area.
 - A Forum - Users can add posts to start their topics and interact with other login users.
@@ -411,7 +431,7 @@ There is a link to my linked-in account URL for business growth potential. It is
 
 
 ## Testing
-Testing information can be found in separate TESTING—MD file. [Link](/testing.md)
+Testing information can be found in separate [Testing.md File](/testing.md)
 
 ## Deployment
 #### Heroku
