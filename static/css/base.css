@@ -7,7 +7,7 @@ html {
      background-size: cover;
      height: calc(100vh - 164px);
      color: #000;
-     font-family: 'Montserrat';
+     font-family: 'PT Sans', sans-serif;
  }
 
  .card-img-top {
